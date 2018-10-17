@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/stlyes.css">
+    <script src="./JS/scripts.js"></script>
+    <title>My Task Board</title>
+</head>
+
+<body onload="stickyOnLoad();">
+
+    <div class="container-fluid wrapper">
+        <div>
+            <!--Title-->
+            <img class="titleimg" src="./css/images/title.png" alt="My Task Board" />
+        </div>
+
+        <!--Form-->
+        <div class="formbg">
+            <form method="POST" action="homepage.html">
+                <div class="form-group">
+                    <div class="row">
+
+                        <!--Task Area-->
+                        <div class="col-sm-6">
+                            <label>Task:</label>
+                            <textarea name="text" rows="3" cols="10" wrap="soft" id="task" type="text" class="form-control task" placeholder="Enter your task here!"
+                                required></textarea>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <!--Date Area-->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label id="datelabel">Due Date:</label>
+                                    <input id="date" type="text" class="form-control" placeholder="Enter Due Date" required>
+                                </div>
+                            </div>
+
+                            <!--Time Area (not required)-->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label id="timelabel">Due Time:</label>
+                                    <input id="time" type="text" class="form-control" placeholder="Enter Due Time">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    </form>
+    <!--Errors-->
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <input onclick="generateErrors()" class="btn btn-default" type="button" Value="Save Task!" />
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="errors">
+        <ul class="errorList">
+        </ul>
+    </div>
+    </div>
+
+    <!--Stickynotes-->
+    <div class="notesContainer">
+        <div class="row notesRow">
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
