@@ -1,4 +1,4 @@
-# My Task Board
+# [My Task Board](https://hamutalg.github.io/MyTaskBoard/)
 #### JavaScript - HTML - CSS3
 
 A one-page webpage to organize "to-do" tasks.  
